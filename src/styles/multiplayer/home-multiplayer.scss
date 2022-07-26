@@ -1,0 +1,108 @@
+@import '../theme.scss';
+
+#page-home-multiplayer {
+  // background-image: linear-gradient(to top, #000, $bg, #000);
+
+  display: flex;
+  justify-content: center;
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  header {
+    width: 100%;
+    padding: .5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  main {
+    height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .box {
+      max-width: 640px;
+      width: 100%;
+      align-items: stretch;
+      display: flex;
+      gap: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  .area-login {
+    flex: 1;
+
+    padding: .5rem 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    position: relative;
+
+    .to-login {
+      height: 3.125rem;
+      padding: .5rem 1rem;
+      border-radius: .25rem;
+      font-weight: 500;
+      background-color: #ea4335;
+      color: #fff;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+
+      cursor: pointer;
+      border: 0;
+
+      transition: filter .2s;
+
+      &:hover, &:focus {
+        filter: brightness(.9);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 110%;
+      background-color: $details;
+      top: 50%;
+      right: -.75rem;
+      transform: translateY(-50%);
+    }
+  }
+
+  .area-to-enter-the-room {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+
+      input {
+        height: 50px;
+        padding: .5rem 1rem;
+        border-radius: .25rem;
+        border: none;
+        color: $textInputColor;
+      }
+    }
+  }
+}

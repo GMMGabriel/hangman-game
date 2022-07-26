@@ -1,0 +1,146 @@
+@import './theme.scss';
+
+#game {
+  min-height: 100vh;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    h1 {
+      margin-bottom: .5rem;
+    }
+
+    .hearts-life {
+      max-width: 300px;
+      width: auto;
+
+      figure {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .category-selected{
+      text-transform: capitalize;
+    }
+
+    #letters {
+      display: flex;
+      gap: .5rem;
+
+      .letter {
+        width: 1.875rem;
+        padding: 0 .5rem;
+        border-bottom: solid 2px #f5f5f5;
+        font-size: 1.25rem;
+        text-align: center;
+      }
+
+      .separator {
+        width: .875rem;
+      }
+    }
+
+    .hint {
+      text-align: center;
+      margin: 1.25rem 0 1.5rem;
+    }
+
+    .keyboard {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+
+      p {
+        display: flex;
+        align-items: flex-start;
+        gap: .5rem;
+      }
+    }
+
+    .final-message {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+    }
+
+    .winner {
+      text-align: center;
+
+      &>p:nth-child(1) {
+        color: $green;
+      }
+
+      span.remaining-chances-1 {
+        color: $chances1;
+      }
+
+      span.remaining-chances-2 {
+        color: $chances2;
+      }
+
+      span.remaining-chances-3 {
+        color: $chances3;
+      }
+
+      span.remaining-chances-4 {
+        color: $chances4;
+      }
+
+      span.remaining-chances-5 {
+        color: $chances5;
+      }
+
+      span.remaining-chances-6 {
+        color: $chances6;
+      }
+    }
+
+    .defeated {
+      text-align: center;
+
+      &>p {
+        color: $red;
+      }
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+      a:nth-child(2) {
+        order: -1;
+      }
+      a.spacing {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import './theme.scss';
+
+#page-new-room {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  main {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    form {
+      width: 100%;
+      padding: 1rem;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .fields {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: .5rem;
+
+        input{
+          max-width: 400px;
+          width: 100%;
+          padding: .5rem;
+          color: $textInputColor;
+        }
+      }
+
+      .actions{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

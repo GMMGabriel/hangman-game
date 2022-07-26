@@ -1,0 +1,19 @@
+export function categories() {
+  return {
+    countries: ['áfrica do sul', 'áustria', 'afeganistão', 'albânia', 'antártida', 'arábia saudita', 'argélia', 'armênia', 'austrália', 'alemanha', 'angola', 'argentina', 'bélgica', 'bolívia', 'bulgária', 'bahamas', 'bermudas', 'brasil', 'cabo verde', 'camarões', 'canadá', 'cazaquistão', 'colômbia', 'coreia do norte', 'coreia do sul', 'costa rica', 'costa do marfim', 'croácia', 'catar', 'catar', 'chile', 'china', 'cuba', 'dinamarca', 'emirados árabes unidos', 'eslováquia', 'eslovénia', 'estados unidos', 'egito', 'equador', 'espanha', 'finlândia', 'frança', 'filipinas', 'geórgia', 'grécia', 'guiana francesa', 'guiné', 'granada', 'guatemala', 'honduras', 'holanda', 'hungria', 'ilhas cayman', 'ilhas virgens americanas', 'ilhas virgens britânicas', 'indonésia', 'irã', 'islândia', 'itália', 'índia', 'iraque', 'irlanda', 'israel', 'japão', 'jordânia', 'jamaica', 'líbano', 'líbia', 'libéria', 'lituânia', 'méxico', 'mônaco', 'macedônia', 'madagáscar', 'malásia', 'moçanbique', 'mongólia', 'maldivas', 'marrocos', 'nigéria', 'nova zelândia', 'nepal', 'noruega', 'países baixos', 'panamá', 'paquistão', 'polônia', 'paraguai', 'peru', 'portugal', 'rússia', 'reino unido', 'república checa', 'república dominicana', 'romênia', 'ruanda', 'senegal', 'singapura', 'síria', 'santa helena', 'santa lúcia', 'serra leoa', 'suécia', 'suíça', 'sudão', 'tailândia', 'taiwan', 'tanzânia', 'tunísia', 'turquia', 'uruguai', 'ucrânia', 'vaticano', 'venezuela', 'vietname'],
+    fruits: ['abacate', 'abacaxi', 'azeitona', 'açaí', 'acerola', 'ameixa', 'amora', 'abóbora', 'banana', 'cacau', 'cereja', 'conde', 'cupuaçu', 'caju', 'carambola', 'coco', 'caqui', 'damasco', 'figo', 'framboesa', 'goiaba', 'graviola', 'groselha', 'guaraná', 'jabuticaba', 'jaca', 'kiwi', 'laranja', 'limão', 'maçã', 'mamão', 'manga', 'maracuja', 'morango', 'melancia', 'melão', 'pequi', 'pêra', 'pêssego', 'pinha', 'pistache', 'pitanga', 'romã', 'tangerina', 'uva'],
+    colors: ['amarelo', 'azul', 'anil', 'ametista', 'areia', 'branco', 'bege', 'bordô', 'bronze', 'cinza', 'castanho', 'ciano', 'caramelo', 'carmim', 'chocolate', 'cobre', 'creme', 'dourado', 'esmeralda', 'fúcsia', 'ferrugem', 'gelo', 'laranja', 'lilás', 'lima', 'marrom', 'madeira', 'marfim', 'magenta', 'neve', 'ouro', 'oliva', 'ocre', 'preto', 'prata', 'púrpura', 'rosa', 'roxo', 'safira', 'siena', 'sépia', 'salmão', 'turquesa', 'verde', 'vermelho', 'violeta', 'vinho'],
+    animals: ['aranha', 'anta', 'águia', 'alce', 'boi', 'boto', 'baleia', 'cobra', 'cavalo', 'camaleão', 'coelho', 'castor', 'cachorro', 'elefante', 'égua', 'esquilo', 'foca', 'formiga', 'fuinha', 'furão', 'gato', 'girafa', 'gazela', 'garça', 'gorila', 'hipopótamo', 'hiena', 'hamster', 'iguana', 'javali', 'jacaré', 'jiboia', 'jumento', 'jaguatirica', 'lagarta', 'lesma', 'lula', 'lagartixa', 'leão', 'leopardo', 'lobo', 'morsa', 'mamute', 'mosca', 'macaco', 'ornitorrinco', 'ovelha', 'onça', 'pantera', 'pato', 'pavão', 'porco', 'panda', 'rato', 'rinoceronte', 'rã', 'sapo', 'tartaruga', 'tatu', 'tarantula', 'tigre', 'urubu', 'urso', 'vaca', 'zebra', 'zangão'],
+    foods: ['almôndega', 'acarajé', 'arroz doce', 'arroz carreteiro', 'biscoito', 'brioche', 'bolo', 'brigadeiro', 'baião de dois', 'bucho', 'cappuccino', 'canjica', 'carne seca', 'chucrute', 'croisant', 'croquete', 'cuscuz', 'churrasco', 'cocada', 'esfirra', 'empada', 'feijoada', 'feijão tropeiro', 'fritas', 'frango assado', 'gelatina', 'geléia', 'lasanha', 'macarrão', 'mousse', 'omelete', 'panqueca', 'pastel', 'pão de queijo', 'pudim', 'polenta', 'pizza', 'risotto', 'salada de frutas', 'strogonoff', 'sopa', 'torta', 'tapioca'],
+  }
+}
+
+export function translatedCategories() {
+  return {
+    countries: "países",
+    fruits: "frutas",
+    colors: "cores",
+    animals: "animais",
+    foods: "comidas",
+  }
+}

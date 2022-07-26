@@ -1,0 +1,102 @@
+@import './theme.scss';
+
+#page-room {
+  min-height: 100vh;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    h1 {
+      margin-bottom: .5rem;
+    }
+
+    .hearts-life {
+      max-width: 300px;
+      width: auto;
+
+      figure {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    #letters {
+      display: flex;
+      gap: .5rem;
+
+      .letter {
+        width: 1.875rem;
+        padding: 0 .5rem;
+        border-bottom: solid 2px #f5f5f5;
+        font-size: 1.25rem;
+        text-align: center;
+      }
+
+      .separator {
+        width: .875rem;
+      }
+    }
+
+    .hint {
+      text-align: center;
+      margin: 1.25rem 0 1.5rem;
+    }
+
+    .keyboard {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+
+      p {
+        display: flex;
+        align-items: flex-start;
+        gap: .5rem;
+      }
+    }
+
+    .final-message {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+    }
+
+    .winner {
+      text-align: center;
+    }
+    
+    .winner * {
+      color: $green;
+    }
+
+    .defeated {
+      text-align: center;
+    }
+    
+    .defeated * {
+      color: $red;
+    }
+  }
+}

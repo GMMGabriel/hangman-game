@@ -1,0 +1,43 @@
+@import './theme.scss';
+
+#not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .5rem;
+
+        h1 {
+          font-family: 'Poppins', sans-serif;
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+        }
+      }
+    }
+
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
