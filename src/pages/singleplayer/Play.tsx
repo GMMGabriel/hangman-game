@@ -1,6 +1,6 @@
 /* eslint-disable array-callback-return */
 import { useParams } from "react-router-dom";
-import { categories, translatedCategories } from "../../categoriesSingleplayer/categories";
+import { translatedCategories } from "../../categoriesSingleplayer/categories";
 import { Game } from "../../components/Game";
 import { NotFound } from "../NotFound";
 
@@ -23,7 +23,6 @@ export function Play() {
   if (infos !== undefined) {
     return (
       <Game category={params.cat} infosCategory={infos} />
-      // <h1>Play</h1>
     )
   } else {
     return (
