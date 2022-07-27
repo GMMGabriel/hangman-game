@@ -18,7 +18,7 @@ export function HomeSingleplayer() {
         <nav>
           <>
             {Object.entries(cats).map((value, key) => {
-              return <Link to={`/singleplayer/${tc[key][0]}`}>{tc[key][1]}</Link>
+              return <Link key={key} to={`/singleplayer/${tc[key][0]}`}>{tc[key][1]}</Link>
             })}
             <Link to="/" className="button go-back">
               Voltar

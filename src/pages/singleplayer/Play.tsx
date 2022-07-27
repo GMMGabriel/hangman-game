@@ -18,7 +18,6 @@ export function Play() {
   }).filter(item => {
     return item !== undefined
   })[0]
-  console.log(infos);
 
   if (infos !== undefined) {
     return (

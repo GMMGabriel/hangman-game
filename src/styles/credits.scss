@@ -21,6 +21,10 @@
       align-items: center;
       gap: 1rem;
 
+      @media only screen and (max-width: 720px) {
+        flex-direction: column;
+      }
+
       figure {
         width: 200px;
         height: 200px;
@@ -37,6 +41,11 @@
         flex-direction: column;
         justify-content: center;
         gap: 1rem;
+
+        @media only screen and (max-width: 720px) {
+          align-items: center;
+          text-align: center;
+        }
 
         h2 {
           font-size: 1.5rem;

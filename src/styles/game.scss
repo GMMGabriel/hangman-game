@@ -50,6 +50,8 @@
 
     #letters {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: .5rem;
 
       .letter {
@@ -81,6 +83,10 @@
         display: flex;
         align-items: flex-start;
         gap: .5rem;
+
+        @media only screen and (max-width: 469px) {
+          gap: .225rem;
+        }
       }
     }
 
