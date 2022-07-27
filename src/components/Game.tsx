@@ -279,24 +279,24 @@ export function Game(props: GameProps) {
                 })}
               </p>
               <p>
-                <div></div>
+                <span></span>
                 {["A", "S", "D", "F", "G", "H", "J", "K", "L"].map((l, key) => {
                   return (
                     <Button key={key} isKey type="button" onClick={() => keyClicked(l)} disabled={alreadyTested.includes(l)}>{l}</Button>
                   )
                 })}
-                <div></div>
+                <span></span>
               </p>
               <p>
-                <div></div>
-                <div></div>
+                <span></span>
+                <span></span>
                 {["Z", "X", "C", "V", "B", "N", "M"].map((l, key) => {
                   return (
                     <Button key={key} isKey type="button" onClick={() => keyClicked(l)} disabled={alreadyTested.includes(l)}>{l}</Button>
                   )
                 })}
-                <div></div>
-                <div></div>
+                <span></span>
+                <span></span>
               </p>
             </div>
 
