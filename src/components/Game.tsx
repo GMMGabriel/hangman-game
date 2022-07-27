@@ -258,7 +258,7 @@ export function Game(props: GameProps) {
                 } else if (l === ' ') {
                   return <span key={key} className="separator"></span>
                 } else {
-                  return <span key={key} className="letter">&nbsp;&nbsp;</span>
+                  return <span key={key} className="letter">&nbsp;</span>
                 }
               })}
             </div>
