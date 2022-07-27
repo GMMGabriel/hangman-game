@@ -28,22 +28,10 @@ export function Game(props: GameProps) {
   const navigate = useNavigate()
   // Constante que guarda a palavra secreta
   const [keyword] = useState(() => {
-    const storageValue = localStorage.getItem('keyword');
     if (props.category && props.infosCategory) {
       const arr = Object.entries(categories())[Number(props.infosCategory[1])][1]
-      if (storageValue) {
-        if (arr.includes(storageValue)) {
-          return storageValue;
-        } else {
-          const newStorageValue = arr[Math.floor(Math.random() * arr.length)].toUpperCase()
-          localStorage.setItem('keyword', newStorageValue)
-          return newStorageValue
-        }
-      } else {
-        const newStorageValue = arr[Math.floor(Math.random() * arr.length)].toUpperCase()
-        localStorage.setItem('keyword', newStorageValue)
-        return newStorageValue
-      }
+      const newKeyword = arr[Math.floor(Math.random() * arr.length)].toUpperCase()
+      return newKeyword
     }
     return '';
   })

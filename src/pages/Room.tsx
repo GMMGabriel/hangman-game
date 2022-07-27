@@ -31,8 +31,8 @@ export function Room() {
   const [heartsImg, setHeartsImg] = useState(hearts0Img)
 
   // Constante que guarda a palavra secreta
-  // const [keyword] = useState('AÁÀÃÂEÉÈÊIÍÌÎOÓÒÕÔUÚÙÛCÇ')
-  const [keyword] = useState('PALAVRA CHAVE')
+  const [keyword] = useState('AÁÀÃÂEÉÈÊIÍÌÎOÓÒÕÔUÚÙÛCÇ')
+  // const [keyword] = useState('PALAVRA CHAVE')
   // const [keyword] = useState('TESTE TESTE TESTE')
 
   const qtdLetters = keyword.replaceAll(' ', '').split('').length

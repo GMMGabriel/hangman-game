@@ -50,6 +50,15 @@
         &:focus {
           background-color: $details;
         }
+
+        &.outline {
+          border-color: $light;
+
+          &:hover,
+          &:focus {
+            background-color: $light;
+          }
+        }
       }
 
       a.go-back {

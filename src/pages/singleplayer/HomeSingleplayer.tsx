@@ -17,6 +17,7 @@ export function HomeSingleplayer() {
         <span>Escolha uma das categorias abaixo:</span>
         <nav>
           <>
+            <Link to="/singleplayer/random" className="outline">Aleatória</Link>
             {Object.entries(cats).map((value, key) => {
               return <Link key={key} to={`/singleplayer/${tc[key][0]}`}>{tc[key][1]}</Link>
             })}
