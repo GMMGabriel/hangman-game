@@ -1,7 +1,6 @@
 @import './theme.scss';
 
 .button {
-  min-width: 2.5rem;
   height: 50px;
   display: flex;
   flex-direction: column;
@@ -19,7 +18,8 @@
 
   transition: .05s;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     filter: brightness(.9);
   }
 
@@ -37,11 +37,14 @@
 }
 
 .button.isKey {
+  min-width: 2.5rem;
   height: 40px;
   padding: .5rem 0;
 
   @media only screen and (max-width: 469px) {
+    min-width: 25px;
     height: auto;
-    font-size: 1rem;
+    font-size: 12px;
+    padding: .5rem;
   }
 }

@@ -21,7 +21,7 @@
   }
 
   main {
-    padding: 0 .25rem;
+    padding: 0 .5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,7 +86,7 @@
         gap: .5rem;
 
         @media only screen and (max-width: 469px) {
-          gap: .225rem;
+          gap: .45rem;
         }
       }
     }
