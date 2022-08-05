@@ -2,15 +2,19 @@ import { createContext, ReactNode, useEffect, useState } from "react";
 import { auth, Auth } from "../services/firebase";
 import { supabase } from '../services/supabase'
 
+import { createCode } from '../hooks/useRandomCode'
+
 type User = { // tipo do usuário
   id: string;
   name: string;
+  email: string;
   avatar: string;
 }
 
 type AuthContextType = { // tipo do contexto do usuário
   user: User | undefined; // pode ter o tipo de um User ou undefined quando nenhum usuário está logado
-  signInWithGoogle: () => Promise<void>; // quando uma função é assincrona, ela sempre devolve uma Promise (neste caso, void)
+  createNewRoom: (user: User) => Promise<string>; // quando uma função é assincrona, ela sempre devolve uma Promise (neste caso, void)
+  signInWithGoogle: (createRoom?: boolean) => Promise<string>; // quando uma função é assincrona, ela sempre devolve uma Promise (neste caso, void)
   signOutGoogle: () => Promise<void>; // quando uma função é assincrona, ela sempre devolve uma Promise (neste caso, void)
 }
 
@@ -79,7 +83,8 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
 
   async function insertNewUser(user: User) {
     /**
-     * 
+     * Esta função é executada quando um usuário é novo. Na primeira vez
+     * em que ele faz o login.
      */
     const { data } = await supabase
       .from('users')
@@ -87,20 +92,60 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
     return data !== null && data.length > 0
   }
 
+  async function createNewRoom(user: User) {
+    /**
+     * Esta função é executada quando um usuário faz o login juntamente com
+     * o desejo de criar uma nova sala. Ou quando o usuário já está logado
+     * e quer criar uma nova sala.
+     */
+
+    // Cria um código para a sala
+    let codeTheNewRoom = createCode()
+
+    while (true) {
+      // Faz uma busca no banco em relação ao código gerado
+      const { data: codeReturned } = await supabase
+        .from('rooms')
+        .select('code')
+        .eq('code', codeTheNewRoom)
+
+      // Verifica se o código já existe
+      if (codeReturned !== null && codeReturned.length === 0) {
+        // Não existe, pode prosseguir
+        break
+      } else {
+        // Existe, gera outro código e volta para o início do laço,
+        // para uma nova verificação
+        codeTheNewRoom = createCode()
+      }
+    }
+
+    // Depois da verificação do código, é certeza que este ainda não
+    // existe no banco, então é feito um insert com este código
+    const { data, error } = await supabase
+      .from('rooms')
+      .insert([{ code: codeTheNewRoom, idPlayer1: user.id }])
+    if (data !== null && data.length > 0 && error === null) {
+      return codeTheNewRoom
+    }
+    return "#"
+  }
+
   // Utilizando useEffect:
   useEffect(() => {
     const unsubscribe = Auth.onAuthStateChanged(auth, user => {
       if (user && ref) {
-        const { displayName, photoURL, uid } = user;
+        const { displayName, photoURL, uid, email } = user;
 
-        if (!displayName || !photoURL) {
+        if (!displayName || !photoURL || !email) {
           throw new Error('Missing information from Google Acount.');
         }
 
         setUser({
           id: uid,
           name: displayName,
-          avatar: photoURL
+          email: email,
+          avatar: photoURL,
         });
         setRef(false);
       } else {
@@ -118,43 +163,50 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
     }
   }, [user]);
 
-  async function signInWithGoogle() {
+  async function signInWithGoogle(createRoom: boolean = false) {
     const provider = new Auth.GoogleAuthProvider();
     const result = await Auth.signInWithPopup(auth, provider)
-    console.log(result)
 
     if (result.user) {
-      const { displayName, photoURL, uid } = result.user;
+      const { displayName, photoURL, uid, email } = result.user;
 
-      if (!displayName || !photoURL) {
+      if (!displayName || !photoURL || !email) {
         throw new Error('Missing information from Google Acount.');
       }
 
-      setUser({
+      const currentUser = {
         id: uid,
         name: displayName,
-        avatar: photoURL
-      });
+        email: email,
+        avatar: photoURL,
+      }
+
+      setUser(currentUser);
 
       const refCheckIdUser = await checkIdUser(uid)
       if (refCheckIdUser === 1) {
+        // Usuário encontrado
         alert('Bom te ver de novo!')
       } else if (refCheckIdUser === 0) {
-        if (await insertNewUser({
-          id: uid,
-          name: displayName,
-          avatar: photoURL
-        })) {
+        // Não há um usuário com esse id cadastrado, então... cadastra
+        if (await insertNewUser(currentUser)) {
           postMessage(`Olá ${displayName.split(' ')[0]}, seja bem vindo(a)!`)
         } else {
           alert('Falha')
         }
       } else if (refCheckIdUser === 2) {
+        // Mais de um usuário com este id encontrado
         alert('Deu ruim... tem mais de um cadasto com esse ID!')
       } else {
         alert('Voltou null.')
       }
+
+      // Verifica se é preciso criar uma sala nova
+      if (createRoom) {
+        return await createNewRoom(currentUser)
+      }
     }
+    return "#"
   }
 
   async function signOutGoogle() {
@@ -163,7 +215,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   }
 
   return (
-    <AuthContext.Provider value={{ user, signInWithGoogle, signOutGoogle }}>
+    <AuthContext.Provider value={{ user, createNewRoom, signInWithGoogle, signOutGoogle }}>
       {props.children}
     </AuthContext.Provider>
   );

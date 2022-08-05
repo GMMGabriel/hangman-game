@@ -31,7 +31,7 @@
         width: 290px;
         display: block;
         text-decoration: none;
-        border: solid 5px $details;
+        border: solid 5px var(--details);
         border-radius: .5rem;
         padding: .5rem 1rem;
         text-align: center;
@@ -47,7 +47,46 @@
 
         &:hover,
         &:focus {
-          background-color: $details;
+          background-color: var(--details);
+        }
+      }
+    }
+
+    .change-color-theme {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      
+      .theme-list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        display: flex;
+        gap: .5rem;
+        
+        button {
+          width: 30px;
+          height: 30px;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+        }
+
+        .button-theme-blue {
+          background-image: linear-gradient(to right bottom, #006BAD 50%, #003C61 50%);
+          border: solid 1px #45A8E6;
+        }
+        .button-theme-green {
+          background-image: linear-gradient(to right bottom, #10C76B 50%, #0A7A42 50%);
+          border: solid 1px #5FFBAD;
+        }
+        .button-theme-red {
+          background-image: linear-gradient(to right bottom, #C71B33 50%, #7A111F 50%);
+          border: solid 1px #FB6E81;
         }
       }
     }

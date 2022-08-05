@@ -31,7 +31,7 @@
         width: 290px;
         display: block;
         text-decoration: none;
-        border: solid 5px $details;
+        border: solid 5px var(--details);
         border-radius: .5rem;
         padding: .5rem 1rem;
         text-align: center;
@@ -48,15 +48,15 @@
 
         &:hover,
         &:focus {
-          background-color: $details;
+          background-color: var(--details);
         }
 
         &.outline {
-          border-color: $light;
+          border-color: var(--light);
 
           &:hover,
           &:focus {
-            background-color: $light;
+            background-color: var(--light);
           }
         }
       }

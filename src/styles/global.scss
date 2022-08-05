@@ -9,22 +9,32 @@
 
   transition: .15s;
 
-  h1,h2,h3,h4,h5,h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Poppins', sans-serif;
   }
 }
 
 body {
-  background-color: $bg;
+  background-color: var(--bg);
 
   h1 {
     font-size: 2rem;
     font-weight: 500;
   }
+
   h1.title-page {
-    color: $details;
+    color: var(--details);
   }
-  p, span, button, input {
+
+  p,
+  span,
+  button,
+  input {
     font-size: 1.125rem;
   }
 }
@@ -32,5 +42,15 @@ body {
 @media only screen and (max-width: 720px) {
   * {
     font-size: .875rem;
+  }
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--default {
+  background-color: var(--light) !important;
+}
+
+.Toastify__toast--default:not(.Toastify__toast-theme--dark, .Toastify__toast-theme--colored.Toastify__toast--default) {
+  .Toastify__toast-body * {
+    color: #121212;
   }
 }

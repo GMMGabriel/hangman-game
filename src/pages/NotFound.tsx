@@ -7,7 +7,7 @@ import '../styles/not-found.scss';
 export function NotFound() {
     const location = useLocation();
 
-    console.log(location);
+    // console.log(location);
 
     return (
         <div id="not-found">

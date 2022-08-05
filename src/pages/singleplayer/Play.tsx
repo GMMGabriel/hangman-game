@@ -1,7 +1,7 @@
 /* eslint-disable array-callback-return */
 import { useParams } from "react-router-dom";
 import { categories, translatedCategories } from "../../categoriesSingleplayer/categories";
-import { Game } from "../../components/Game";
+import { Game } from "../../components/singleplayer/Game";
 import { NotFound } from "../NotFound";
 
 type GameParams = {

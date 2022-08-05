@@ -1,13 +1,12 @@
 @import './theme.scss';
 
 .button {
-  height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: .5rem 1rem;
-  background: $dark;
+  background: var(--dark);
   border: none;
   border-radius: .25rem;
   box-shadow: 0 2px 0px rgba(0, 0, 0, .5);

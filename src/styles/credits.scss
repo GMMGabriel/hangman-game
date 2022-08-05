@@ -61,10 +61,10 @@
             &:hover,
             &:focus {
               span {
-                color: $details;
+                color: var(--details);
               }
               svg path {
-                fill: $details;
+                fill: var(--details);
               }
             }
           }

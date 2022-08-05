@@ -127,31 +127,31 @@
       text-align: center;
 
       &>p:nth-child(1) {
-        color: $green;
+        color: var(--green);
       }
 
       span.remaining-chances-1 {
-        color: $chances1;
+        color: var(--chances1);
       }
 
       span.remaining-chances-2 {
-        color: $chances2;
+        color: var(--chances2);
       }
 
       span.remaining-chances-3 {
-        color: $chances3;
+        color: var(--chances3);
       }
 
       span.remaining-chances-4 {
-        color: $chances4;
+        color: var(--chances4);
       }
 
       span.remaining-chances-5 {
-        color: $chances5;
+        color: var(--chances5);
       }
 
       span.remaining-chances-6 {
-        color: $chances6;
+        color: var(--chances6);
       }
     }
 
@@ -159,11 +159,12 @@
       text-align: center;
 
       &>p {
-        color: $red;
+        color: var(--red);
       }
     }
 
     .actions {
+      margin-top: 2.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -171,10 +172,6 @@
 
       a:nth-child(2) {
         order: -1;
-      }
-
-      a.spacing {
-        margin-top: 2.5rem;
       }
     }
   }

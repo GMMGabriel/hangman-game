@@ -7,3 +7,16 @@ if (supabaseURL === "" && supabaseKey === "") {
   throw new Error("URL e API key do supabase não existem!")
 }
 export {supabase}
+
+/**
+ * 
+ * tipar o retorno do supabase:
+ * https://supabase.com/docs/reference/javascript/generating-types#usage-with-typescript
+ * 
+ * como fazer o CRUD no supabase:
+ * https://supabase.com/docs/reference/javascript/select
+ * 
+ * como fazer a filtragem no SELECT:
+ * https://supabase.com/docs/reference/javascript/using-filters
+ * 
+ */
