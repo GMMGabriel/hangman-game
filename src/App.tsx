@@ -17,9 +17,9 @@ import { NotFound } from './pages/NotFound';
 function App() {
 
   return (
-    <BrowserRouter>
+    <ThemeContextProvider>
       <AuthContextProvider>
-        <ThemeContextProvider>
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
 
@@ -30,9 +30,9 @@ function App() {
 
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </ThemeContextProvider>
+        </BrowserRouter>
       </AuthContextProvider>
-    </BrowserRouter>
+    </ThemeContextProvider>
   );
 }
 
