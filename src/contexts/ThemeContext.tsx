@@ -23,9 +23,9 @@ export function ThemeContextProvider(props: ThemeContextProviderProps) {
   });
 
   function inEffect() {
+    console.log("Teste")
     const newTheme = localStorage.getItem('theme')
     document.body.id = newTheme ?? 'theme-blue'
-    console.log("Teste")
   }
 
   function changeTheme(newTheme: string) {
