@@ -39,7 +39,7 @@ export function ThemeContextProvider(props: ThemeContextProviderProps) {
     return () => {
       unsubscribe();
     }
-  }, [theme]);
+  }, [, theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, changeTheme }}>
