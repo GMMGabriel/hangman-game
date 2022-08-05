@@ -14,11 +14,14 @@ export const ThemeContext = createContext({} as ThemeContextType);
 
 export function ThemeContextProvider(props: ThemeContextProviderProps) {
   const [theme, setTheme] = useState(() => {
+    console.log("localStorage - INÍCIO")
     const storageValue = localStorage.getItem('theme')
     if (storageValue) {
+      console.log("localStorage - MEIO")
       return storageValue
     }
     localStorage.setItem('theme', 'theme-blue')
+    console.log("localStorage - FIM")
     return 'theme-blue'
   });
 
