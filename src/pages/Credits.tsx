@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse as backHome } from '@fortawesome/free-solid-svg-icons'
 
 import '../styles/credits.scss'
 
@@ -7,7 +9,7 @@ export function Credits() {
     <div id="page-credits">
       <main>
         <h1 className="title-page">Criador</h1>
-       
+
         <div className="box">
           <figure>
             <img src="https://avatars.githubusercontent.com/u/33481928?v=4" alt="Imagem do criador" />
@@ -33,7 +35,9 @@ export function Credits() {
           </div>
         </div>
 
-        <Link to="/" className="button">Voltar</Link>
+        <Link to="/" className="button">
+          <FontAwesomeIcon icon={backHome} /> Voltar
+        </Link>
       </main>
     </div>
   )
