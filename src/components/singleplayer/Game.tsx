@@ -1,6 +1,8 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable array-callback-return */
 import { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowsSpin as iconPlayAgain, faBars as iconMenu } from '@fortawesome/free-solid-svg-icons'
 
 import { useLocation, useNavigate } from 'react-router-dom'
 
@@ -15,7 +17,7 @@ import gallows4Img from '../../assets/images/gallows_4.svg'
 import gallows5Img from '../../assets/images/gallows_5.svg'
 import gallows6Img from '../../assets/images/gallows_6.svg'
 
-import '../../styles/game.scss'
+import '../../styles/singleplayer/game-singleplayer.scss'
 
 type GameProps = {
   category?: string;
@@ -284,7 +286,9 @@ export function Game(props: GameProps) {
             </div>
 
             <div className="actions">
-              <a href="/singleplayer" className="button" onClick={(event) => { goBack("/singleplayer", event) }}>Menu</a>
+              <a href="/singleplayer" className="button" onClick={(event) => { goBack("/singleplayer", event) }}>
+                <FontAwesomeIcon icon={iconMenu}></FontAwesomeIcon> Menu
+              </a>
             </div>
           </>
         ) : (
@@ -317,8 +321,12 @@ export function Game(props: GameProps) {
               </>
             )}
             <div className="actions">
-              <a href={`${location.pathname}`} className="button">Jogar novamente</a>
-              <a href="/singleplayer" className="button">Menu</a>
+              <a href={`${location.pathname}`} className="button">
+                <FontAwesomeIcon icon={iconPlayAgain}></FontAwesomeIcon> Jogar novamente
+              </a>
+              <a href="/singleplayer" className="button">
+                <FontAwesomeIcon icon={iconMenu}></FontAwesomeIcon> Menu
+              </a>
             </div>
           </>
         )}

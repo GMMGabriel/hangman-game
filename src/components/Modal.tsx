@@ -1,5 +1,7 @@
 import { ReactNode, useEffect } from "react"
 
+import '../styles/modal.scss'
+
 type ModalProps = {
   children: ReactNode,
   isOpen: boolean,

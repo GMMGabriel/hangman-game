@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+
 import '../styles/credits.scss'
 
 export function Credits() {

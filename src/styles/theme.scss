@@ -1,5 +1,5 @@
 body {
-  --textInputColor: #29292e;
+  --textInputColor: #f5f5f5;
 
   --green: #24c39b;
   --red: #fb4d42;
@@ -19,25 +19,50 @@ body {
 body#theme-blue {
   --bg: #1D4761;
   --dark: #003C61;
-  --midle: #006BAD;
+  --middle: #006BAD;
   --light: #008CE0;
   --details: #45A8E6;
+  --details-opaque: rgba(69, 168, 230, .5);
+  --bg-input: #073f61;
+  --bg-input-reverse: #164461;
 }
 
 // VERDE
 body#theme-green {
   --bg: #2F7A54;
   --dark: #0A7A42;
-  --midle: #10C76B;
+  --middle: #10C76B;
   --light: #13FA88;
   --details: #5FFBAD;
+  --bg-input: #137a46;
+}
+
+// TURQUESA
+body#theme-turqoise {
+  --bg: #0A423B;
+  --dark: #062924;
+  --middle: #1E423D;
+  --light: #35756D;
+  --details: #35C2A3;
+  --bg-input: #072f2a;
 }
 
 // VERMELHO
 body#theme-red {
   --bg: #7A363F;
   --dark: #7A111F;
-  --midle: #C71B33;
+  --middle: #C71B33;
   --light: #FA2340;
   --details: #FB6E81;
+  --bg-input: #7a1a27;
+}
+
+// ROXO
+body#theme-purple {
+  --bg: #800080;
+  --dark: #4D004D;
+  --middle: #952D95;
+  --light: #CC00CC;
+  --details: #CC3DCC;
+  --bg-input: #5a005a;
 }

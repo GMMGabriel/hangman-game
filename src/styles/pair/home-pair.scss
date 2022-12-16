@@ -1,0 +1,242 @@
+@import "../theme.scss";
+
+#page-home-pair {
+  min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  
+  #modal-container {
+    .modal {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+
+      p {
+        strong, b {
+          font-size: 1em;
+        }
+      }
+
+      button {
+        color: var(--textInputColor);
+      }
+    }
+  }
+
+  header {
+    width: 100%;
+
+    h1 {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    hr {
+      border: 0;
+      border-top: solid 1px var(--dark);
+    }
+
+    #players {
+      padding: 1rem;
+      background-color: var(--dark);
+
+      @media only screen and (min-width: 780.0001px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+        &.turn-0{
+          background-image: linear-gradient(to right, var(--details), transparent 50%);
+        }
+  
+        &.turn-1{
+          background-image: linear-gradient(to left, var(--details), transparent 50%);
+        }
+      }
+
+      @media only screen and (max-width: 780px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      
+        &.turn-0{
+          background-image: linear-gradient(to bottom, var(--details), transparent 50%);
+        }
+  
+        &.turn-1{
+          background-image: linear-gradient(to top, var(--details), transparent 50%);
+        }
+      }
+
+      .box-player {
+        form {
+          @media only screen and (min-width: 780.0001px) {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+          }
+
+          @media only screen and (max-width: 780px) {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            align-items: center;
+          }
+
+          input {
+            width: 215px;
+            border: solid 4px var(--bg-input-reverse);
+            background-color: var(--bg);
+          }
+        }
+
+        &.p1 {
+          form input, .show span{
+            order: 1;
+          }
+        }
+
+        &.p2 {
+          form input, .show span{
+            // order: -1;
+            @media only screen and (min-width: 780.0001px) {
+              text-align: right;
+            }
+          }
+        }
+
+        .show {
+
+          @media only screen and (min-width: 780.0001px) {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+          }
+
+          @media only screen and (max-width: 780px) {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            align-items: center;
+          }
+
+          span {
+            width: 215px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        button {
+          font-size: .75rem;
+          background-color: var(--bg);
+        }
+
+        @media only screen and (max-width: 780px) {
+          form input, .show span {
+            text-align: center;
+          }
+        }
+      }
+
+      .scoreboard {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        
+        .vs {
+          font-size: 2rem;
+          font-family: dogfight;
+        }
+
+        .scores {
+          width: 2rem;
+          // background-color: var(--dark);
+          text-align: center;
+        }
+
+        .score-player2 {
+          margin-left: .35rem;
+        }
+      }
+    }
+  }
+
+  .player-turn {
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+
+    &.none {
+      display: none;
+    }
+  }
+
+  main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    form {
+      padding: .8rem;
+      margin-bottom: 2.5rem;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      @media only screen and (min-width: 450.0001px) {
+        min-width: 380px;
+        width: auto;
+      }
+
+      @media only screen and (max-width: 450px) {
+        width: 100%;
+      }
+
+      .fields {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: .5rem;
+
+        input, textarea{
+          max-width: 400px;
+          width: 100%;
+          padding: .5rem;
+          color: var(--textInputColor);
+        }
+
+        textarea {
+          width: 100%;
+          min-height: 9rem;
+          resize: vertical;
+        }
+      }
+
+      .actions{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    .actions-home {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}

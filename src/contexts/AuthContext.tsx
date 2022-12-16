@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, ReactNode, useEffect, useRef, useState } from "react";
 import { auth, Auth } from "../services/firebase";
 import { supabase } from '../services/supabase'
 
@@ -13,8 +13,8 @@ type User = { // tipo do usuário
 
 type AuthContextType = { // tipo do contexto do usuário
   user: User | undefined; // pode ter o tipo de um User ou undefined quando nenhum usuário está logado
-  createNewRoom: (user: User) => Promise<string>; // quando uma função é assincrona, ela sempre devolve uma Promise (neste caso, void)
-  signInWithGoogle: (createRoom?: boolean) => Promise<string>; // quando uma função é assincrona, ela sempre devolve uma Promise (neste caso, void)
+  createNewRoom: (user: User) => Promise<string>; // quando uma função é assincrona, ela sempre devolve uma Promise (neste caso, string)
+  signInWithGoogle: (createRoom?: boolean) => Promise<string>; // quando uma função é assincrona, ela sempre devolve uma Promise (neste caso, string)
   signOutGoogle: () => Promise<void>; // quando uma função é assincrona, ela sempre devolve uma Promise (neste caso, void)
 }
 
@@ -28,7 +28,7 @@ export const AuthContext = createContext({} as AuthContextType);
 export function AuthContextProvider(props: AuthContextProviderProps) {
   // O tipo desse estado é do tipo User.
   const [user, setUser] = useState<User>();
-  const [ref, setRef] = useState(true);
+  const ref = useRef(true);
 
   async function checkIdUser(id: string) {
     /**
@@ -147,12 +147,12 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
           email: email,
           avatar: photoURL,
         });
-        setRef(false);
+        ref.current = false
       } else {
         if (!user && ref) {
           setUser(undefined);
         } else {
-          setRef(true);
+          ref.current = true
         }
       }
     });

@@ -1,5 +1,15 @@
 @import './theme.scss';
 
+@font-face {
+  font-family: dogfight;
+  src: url(../assets/fonts/dogfight/dogfight.ttf);
+}
+
+@font-face {
+  font-family: knife_fight;
+  src: url(../assets/fonts/knife_fight/knife_fight.ttf);
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -37,6 +47,10 @@ body {
   input {
     font-size: 1.125rem;
   }
+
+  b, strong {
+    font-weight: 700;
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -53,4 +67,43 @@ body {
   .Toastify__toast-body * {
     color: #121212;
   }
+}
+
+input[type="text"], textarea {
+  border: solid 4px var(--dark);
+  background-color: var(--bg-input);
+  // background-color: var(--dark);
+  border-radius: 4px;
+  color: var(--textInputColor);
+
+  &:focus {
+    background-color: var(--bg-input);
+  }
+}
+
+// MUDANDO A APARÊNCIA DOS SCROLLS
+// width
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+// Track
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+  background: var(--details);
+  border-radius: 4px;
+}
+
+// Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light);
+}
+
+// Handle on active
+::-webkit-scrollbar-thumb:active {
+  background: #fff;
 }

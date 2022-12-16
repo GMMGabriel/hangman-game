@@ -4,13 +4,21 @@ import { AuthContextProvider } from './contexts/AuthContext';
 import { ThemeContextProvider } from './contexts/ThemeContext';
 
 // <PAGES> ============================================================
+// PÁGINA INICIAL
 import { Home } from './pages/Home';
 
+// UM JOGADOR
 import { HomeSingleplayer } from './pages/singleplayer/HomeSingleplayer';
-import { Play } from './pages/singleplayer/Play';
+import { Play as SingleplayerPlay } from './pages/singleplayer/Play';
 
+// DOIS JOGADORES
+import { HomePair } from './pages/pair/HomePair';
+// import { Play as PairPlay } from './pages/pair/Play';
+
+// CRÉDITOS
 import { Credits } from './pages/Credits';
 
+// PÁGINA NÃO ENCONTRADA
 import { NotFound } from './pages/NotFound';
 // </PAGES> ============================================================
 
@@ -24,7 +32,9 @@ function App() {
             <Route path="/" element={<Home />} />
 
             <Route path="/singleplayer" element={<HomeSingleplayer />} />
-            <Route path="/singleplayer/:cat" element={<Play />} />
+            <Route path="/singleplayer/:cat" element={<SingleplayerPlay />} />
+
+            <Route path="/pair" element={<HomePair />} />
 
             <Route path="/credits" element={<Credits />} />
 

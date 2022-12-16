@@ -14,19 +14,15 @@ export const ThemeContext = createContext({} as ThemeContextType);
 
 export function ThemeContextProvider(props: ThemeContextProviderProps) {
   const [theme, setTheme] = useState(() => {
-    console.log("localStorage - INÍCIO")
     const storageValue = localStorage.getItem('theme')
     if (storageValue) {
-      console.log("localStorage - MEIO")
       return storageValue
     }
     localStorage.setItem('theme', 'theme-blue')
-    console.log("localStorage - FIM")
     return 'theme-blue'
   });
 
   function inEffect() {
-    console.log("Teste")
     const newTheme = localStorage.getItem('theme')
     document.body.id = newTheme ?? 'theme-blue'
   }
@@ -38,11 +34,11 @@ export function ThemeContextProvider(props: ThemeContextProviderProps) {
 
   useEffect(() => {
     const unsubscribe = inEffect;
-    // Sempre que é declarado um eventListener, é obrigatório se "descadastrar" desse evento no final do useEffect. (essa é uma boa prática)
+    // Sempre que é declarado um eventListener, é preciso se "descadastrar" desse evento no final do useEffect. (essa é uma boa prática)
     return () => {
       unsubscribe();
     }
-  }, [, theme]);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, changeTheme }}>

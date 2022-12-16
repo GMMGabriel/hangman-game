@@ -2,9 +2,9 @@
 
 .button {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: .5rem;
   padding: .5rem 1rem;
   background: var(--dark);
   border: none;

@@ -20,6 +20,7 @@
       justify-content: center;
       align-items: center;
       gap: 1rem;
+      margin-bottom: 2.5rem;
 
       @media only screen and (max-width: 720px) {
         flex-direction: column;
@@ -70,10 +71,6 @@
           }
         }
       }
-    }
-
-    &>a {
-      margin-top: 2.5rem;
     }
   }
 }
