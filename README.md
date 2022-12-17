@@ -36,4 +36,4 @@ Padrão de jogos de forca, uma pessoa digita uma palavra e a outra tenta acertar
 ---
 
 - Multiplayer.
-<p>Ainda em desenvolvimento.</p>
+<p>Em desenvolvimento.</p>
