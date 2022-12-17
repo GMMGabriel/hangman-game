@@ -18,7 +18,7 @@ Projeto pessoal, que comecei a fazer para por em prática conhecimentos adquirid
 ## ⚙️ Funcionalidades
 
 - Um jogador;
-<div class="images" style="display: flex; gap: 1rem;">
+<div class="images">
   <img src="github/singleplayer1.png" style="max-width: 100%;">
   <img src="github/singleplayer2.png" style="max-width: 100%;">
 </div>
@@ -27,7 +27,7 @@ O jogador tem algumas opções de categorias como "Países", "Comidas", entre ou
 ---
 
 - Dois jogadores;
-<div class="images" style="display: flex; gap: 1rem;">
+<div class="images">
   <img src="github/twoPlayers1.png" style="max-width: 100%;">
   <img src="github/twoPlayers2.png" style="max-width: 100%;">
 </div>
