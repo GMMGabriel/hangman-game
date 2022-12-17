@@ -6,7 +6,7 @@
 
 ## 💻 Sobre o projeto
 
-Projeto pessoal, que comecei a fazer para por em prática conhecimentos adiquiridos nos estudos sobre [ReactJs](https://reactjs.org/).
+Projeto pessoal, que comecei a fazer para por em prática conhecimentos adquiridos nos estudos sobre [ReactJs](https://reactjs.org/).
 
 ## 🧪 Tecnologias
 
