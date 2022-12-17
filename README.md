@@ -1,7 +1,7 @@
 # Hangman-game (Jogo da forca)
 
 <h1 align="center">
-  <img href="github/home.png" alt="Hangman-game (Jogo da forca)" style="max-width: 100%;">
+  <img src="github/home.png" alt="Hangman-game (Jogo da forca)" style="max-width: 100%;">
 </h1>
 
 ## 💻 Sobre o projeto
