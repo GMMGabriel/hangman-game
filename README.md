@@ -24,6 +24,8 @@ Projeto pessoal, que comecei a fazer para por em prática conhecimentos adquirid
 </div>
 O jogador tem algumas opções de categorias como "Países", "Comidas", entre outras. São palavras predefinidas. Além dessas, a primeira opção é "Aleatória", onde a cada rodada, será selecionada uma categoria aleatória e uma palavra aleatória dessa categoria.
 
+---
+
 - Dois jogadores;
 <div class="images" style="display: flex; gap: 1rem;">
   <img src="github/twoPlayers1.png" style="max-width: 100%;">
@@ -31,5 +33,7 @@ O jogador tem algumas opções de categorias como "Países", "Comidas", entre ou
 </div>
 Padrão de jogos de forca, uma pessoa digita uma palavra e a outra tenta acertar, e vice-versa.
 
+---
+
 - Multiplayer.
-Ainda em desenvolvimento.
+<p>Ainda em desenvolvimento.</p>
