@@ -12,8 +12,8 @@ Projeto pessoal, que comecei a fazer para por em prática conhecimentos adquirid
 
 - [ReactJs](https://reactjs.org/);
 - [TypeScript](https://www.typescriptlang.org/);
-- [Firebase](https://firebase.google.com/) (futuramente, será usado para autenticação no modo multijogador);
-- [Supabase](https://supabase.com/) (futuramente, será usado no modo multijogador).
+- [Firebase](https://firebase.google.com/) (futuramente, será usado para autenticação no modo multiplayer);
+- [Supabase](https://supabase.com/) (futuramente, será usado no modo multiplayer).
 
 ## ⚙️ Funcionalidades
 
