@@ -19,8 +19,8 @@ Projeto pessoal, que comecei a fazer para por em prática conhecimentos adquirid
 
 - Um jogador;
 <div class="images">
-  <img src="github/singleplayer1.png" style="max-width: 100%;">
-  <img src="github/singleplayer2.png" style="max-width: 100%;">
+  <img src="github/singleplayer1.png" style="max-width: 50%; float: left;">
+  <img src="github/singleplayer2.png" style="max-width: 50%; float: left;">
 </div>
 O jogador tem algumas opções de categorias como "Países", "Comidas", entre outras. São palavras predefinidas. Além dessas, a primeira opção é "Aleatória", onde a cada rodada, será selecionada uma categoria aleatória e uma palavra aleatória dessa categoria.
 
