@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser as onePlayer, faUserFriends as twoPlayers, faGlobe as multiplayer, faCopyright as credits, faLock } from '@fortawesome/free-solid-svg-icons'
 
-// import { useTheme } from '../hooks/useTheme'
+import { useTheme } from '../hooks/useTheme'
 
 import '../styles/home.scss'
 
 export function Home() {
-  // const { changeTheme } = useTheme()
+  const { changeTheme } = useTheme()
 
   return (
     <div id="page-home">
@@ -34,7 +34,7 @@ export function Home() {
           </Link>
         </nav>
 
-        {/* <div className="change-color-theme">
+        <div className="change-color-theme">
           <p>mudar o tema da aplicação</p>
           <ul className="theme-list">
             <li><button className="button-theme-blue" onClick={() => changeTheme('theme-blue')}></button></li>
@@ -43,7 +43,7 @@ export function Home() {
             <li><button className="button-theme-red" onClick={() => changeTheme('theme-red')}></button></li>
             <li><button className="button-theme-purple" onClick={() => changeTheme('theme-purple')}></button></li>
           </ul>
-        </div> */}
+        </div>
       </main>
     </div>
   )
