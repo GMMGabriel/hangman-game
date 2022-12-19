@@ -123,7 +123,36 @@ export function Game(props: GameProps) {
     }
   }, [remainingLetters])
 
+  useEffect(() => {
+    const images = [
+      '../../assets/images/gallows_0.svg',
+      '../../assets/images/gallows_1.svg',
+      '../../assets/images/gallows_2.svg',
+      '../../assets/images/gallows_3.svg',
+      '../../assets/images/gallows_4.svg',
+      '../../assets/images/gallows_5.svg',
+      '../../assets/images/gallows_6.svg',
+    ]
+
+    cacheImages(images)
+  }, [])
+
   // </USEEFFECT> ============================================================
+
+  async function cacheImages(srcArray:string[]){
+    /**
+     * Faz o pré-carregamento das imagens da forca.
+     */
+    const promises = await srcArray.map((src) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image()
+
+        img.src = src
+      })
+    })
+
+    await Promise.all(promises)
+  }
 
   function goBack(to: string, e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     e.preventDefault()
