@@ -1,4 +1,4 @@
-# Hangman-game (Jogo da forca)
+# Hangman-game (Jogo da forca) [Acessar aplicação](https://hangman-game-gmm.netlify.app/).
 
 <h1 align="center">
   <img src="github/home.png" alt="Hangman-game (Jogo da forca)" style="max-width: 100%;">
