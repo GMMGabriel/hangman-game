@@ -18,6 +18,9 @@ Projeto pessoal, que comecei a fazer para por em prática conhecimentos adquirid
 
 ## ⚙️ Funcionalidades
 
+- Mudar tema da aplicação;
+<p>Você pode escolher umas das cores predefinidas para ser o seu tema.</p>
+
 - Um jogador;
 <div class="images">
   <img src="github/singleplayer1.png" style="max-width: 100%;">
