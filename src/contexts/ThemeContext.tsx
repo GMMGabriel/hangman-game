@@ -15,6 +15,7 @@ export const ThemeContext = createContext({} as ThemeContextType);
 export function ThemeContextProvider(props: ThemeContextProviderProps) {
   const [theme, setTheme] = useState(() => {
     const storageValue = localStorage.getItem('theme')
+    console.log("storageValue: ", storageValue)
     if (storageValue) {
       return storageValue
     }
