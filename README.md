@@ -1,4 +1,4 @@
-# Hangman-game (Jogo da forca) [Acessar aplicação](https://hangman-game-gmm.netlify.app/).
+# Hangman-game (Jogo da forca)
 
 <h1 align="center">
   <img src="github/home.png" alt="Hangman-game (Jogo da forca)" style="max-width: 100%;">
@@ -13,7 +13,8 @@ Projeto pessoal, que comecei a fazer para por em prática conhecimentos adquirid
 - [ReactJs](https://reactjs.org/);
 - [TypeScript](https://www.typescriptlang.org/);
 - [Firebase](https://firebase.google.com/) (futuramente, será usado para autenticação no modo multiplayer);
-- [Supabase](https://supabase.com/) (futuramente, será usado no modo multiplayer).
+- [Supabase](https://supabase.com/) (futuramente, será usado no modo multiplayer);
+- [Netlify](https://www.netlify.com/) (hospedagem da aplicação).
 
 ## ⚙️ Funcionalidades
 
