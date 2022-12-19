@@ -19,7 +19,7 @@ Projeto pessoal, que comecei a fazer para por em prática conhecimentos adquirid
 ## ⚙️ Funcionalidades
 
 - Mudar tema da aplicação;
-<p>Você pode escolher umas das cores predefinidas para ser o seu tema.</p>
+<p>Você pode escolher umas das cores predefinidas para ser o seu tema. Essa opção se encontra na página principal da aplicação.</p>
 
 - Um jogador;
 <div class="images">
