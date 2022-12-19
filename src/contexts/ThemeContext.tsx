@@ -24,7 +24,6 @@ export function ThemeContextProvider(props: ThemeContextProviderProps) {
 
   function inEffect() {
     const newTheme = localStorage.getItem('theme')
-    console.log("newTheme: ", newTheme)
     document.body.id = newTheme ?? 'theme-blue'
   }
 
@@ -35,6 +34,7 @@ export function ThemeContextProvider(props: ThemeContextProviderProps) {
 
   useEffect(() => {
     const unsubscribe = inEffect;
+    unsubscribe();
     // Sempre que é declarado um eventListener, é preciso se "descadastrar" desse evento no final do useEffect. (essa é uma boa prática)
     return () => {
       unsubscribe();
