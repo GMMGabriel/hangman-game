@@ -15,7 +15,6 @@ export const ThemeContext = createContext({} as ThemeContextType);
 export function ThemeContextProvider(props: ThemeContextProviderProps) {
   const [theme, setTheme] = useState(() => {
     const storageValue = localStorage.getItem('theme')
-    console.log("storageValue: ", storageValue)
     if (storageValue) {
       return storageValue
     }
@@ -25,6 +24,7 @@ export function ThemeContextProvider(props: ThemeContextProviderProps) {
 
   function inEffect() {
     const newTheme = localStorage.getItem('theme')
+    console.log("newTheme: ", newTheme)
     document.body.id = newTheme ?? 'theme-blue'
   }
 
