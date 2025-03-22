@@ -1,0 +1,10 @@
+{
+  "technologies": [
+    "react",
+    "vite",
+    "typescript",
+    "firebase",
+    "supabase",
+    "netlify"
+  ]
+}
